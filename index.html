@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="ru" class="custom-scrollbar">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>BETATRANSFER</title>
+  <meta name="theme-color" content="#2C2C2C" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles/swiper.min.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+  <body>
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #060723;
+        z-index: 9999999999;
+        transition: 1s cubic-bezier(0.4, 0, 0, 1);
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+    <div class="preloader"></div>
+    <div class="page-bg"></div>
+<header class="header">
+  <div class="container is-full-w">
+    <div class="header__wrapper">
+      <a href="./" class="header__logo">
+        <div class="header__logo-full"><img src="./img/logo.svg" alt="" /></div>
+      </a>
+      <div class="netbook-hidden"></div>
+      <nav class="header__nav">
+        <a href="./" class="header__nav-item is-underline-in">Exchanger</a>
+        <a href="./" class="header__nav-item is-underline-in">Wallet</a>
+        <a href="https://html.miks-soft.com/betatransfer-kassa/home.html" class="header__nav-item is-underline-in">KASSA</a>
+        <a href="./" class="header__nav-item is-underline-in">Help</a>
+        <a href="./blog.html" class="header__nav-item is-underline-in">Blog</a>
+        <a href="./about.html" class="header__nav-item is-underline-in">About us</a>
+        <div class="header__nav-item netbook-visible">
+          <a href="./" class="header__locale-link is-underline-in is-current">ENG</a>
+          |
+          <a href="./" class="header__locale-link is-underline-in">RU</a>
+          |
+          <a href="./" class="header__locale-link is-underline-in">GE</a>
+        </div>
+      </nav>
+      <div class="header-burger netbook-visible">
+        <div class="header-burger__line"></div>
+        <div class="header-burger__line"></div>
+        <div class="header-burger__line"></div>
+        <div class="header-burger__line"></div>
+      </div>
+      <div class="lang-switcher netbook-hidden">
+        <div class="lang-switcher__header">
+          Eng
+          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 0.5L6 5.5L11 0.5" stroke="white" />
+          </svg>
+        </div>
+        <div class="lang-switcher__header-dropdown">
+          <a href="./" class="is-underline-in">ENG</a>
+          <a href="./" class="is-underline-in">RU</a>
+          <a href="./" class="is-underline-in">GE</a>
+        </div>
+      </div>
+      <button type="button" class="button is-ghost header__sing-button">
+        <img src="./img/sing-up-annimation.gif" alt="" />
+        Sign Up
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- <div class="fixed-header">
+  <div class="header__wrapper">
+    <div type="button" class="button header__menu-button js-menu">
+      <div class="header-burger">
+        <div class="header-burger__line"></div>
+        <div class="header-burger__line"></div>
+        <div class="header-burger__line"></div>
+        <div class="header-burger__line"></div>
+      </div>
+      Menu
+    </div>
+
+    <a href="./" class="header__logo">
+      <div class="header__logo-full"><img src="./img/logo.svg" alt="" /></div>
+    </a>
+    <nav class="header__nav">
+      <a href="./" class="header__nav-item is-underline-in">Exchanger</a>
+      <a href="./" class="header__nav-item is-underline-in">Wallet</a>
+      <a href="./" class="header__nav-item is-underline-in">Merchant</a>
+      <a href="./" class="header__nav-item is-underline-in">Help</a>
+      <a href="./" class="header__nav-item is-underline-in">Blog</a>
+      <a href="./" class="header__nav-item is-underline-in">Contact us</a>
+      <div class="header__nav-item">
+        <a href="./" class="header__locale-link is-underline-in is-current">ENG</a>
+        |
+        <a href="./" class="header__locale-link is-underline-in">RU</a>
+        |
+        <a href="./" class="header__locale-link is-underline-in">GE</a>
+      </div>
+    </nav>
+
+    <button type="button" class="button is-ghost header__sing-button">
+      <img src="./img/sing-up-annimation.gif" alt="" />
+      Sign Up
+    </button>
+  </div>
+</div> -->
+
+    <main class="page">
+      <div class="chips">
+        <div class="chip-1">
+          <div class="chip-container">
+            <img src="./img/chips/chip-1.png" />
+          </div>
+        </div>
+        <div class="chip-2">
+          <div class="chip-container">
+            <img src="./img/chips/chip-2.png" />
+          </div>
+        </div>
+        <div class="chip-3">
+          <div class="chip-container">
+            <img src="./img/chips/chip-3.png" />
+          </div>
+        </div>
+
+        <div class="chip-4">
+          <div class="chip-container">
+            <img src="./img/chips/chip-4.png" />
+          </div>
+        </div>
+        <div class="chip-5">
+          <div class="chip-container">
+            <img src="./img/chips/chip-5.png" />
+          </div>
+        </div>
+        <div class="chip-6">
+          <div class="chip-container">
+            <img src="./img/chips/chip-6.png" />
+          </div>
+        </div>
+      </div>
+      <section class="start-section">
+        <div class="start-section__glow is-left">
+          <div class="start-section__glow-container">
+            <picture>
+              <!-- <source srcset="./img/glows/glow-1-2.webp" type="image/webp" /> -->
+              <img src="./img/glows/glow-1-min.png" class="is-initial" />
+            </picture>
+          </div>
+        </div>
+        <div class="start-section__glow is-right">
+          <div class="start-section__glow-container">
+            <picture>
+              <!-- <source srcset="./img/glows/glow-2-1.webp" type="image/webp" /> -->
+              <img src="./img/glows/glow-2-min.png" class="is-initial" />
+            </picture>
+          </div>
+        </div>
+        <div class="start-section__content">
+          <h1 class="start-section__title is-title">Fintech platform</h1>
+          <h5 class="start-section__subtitle">for customers and global business</h5>
+          <div class="start-section__content-separator"></div>
+          <p class="start-section__text">
+            Reliable, beneficial and technologically <br />
+            advanced - our solutions offer advantages.
+          </p>
+          <button type="button" class="button is-ghost">Create account</button>
+        </div>
+      </section>
+      <div class="chips-container is-1">
+        <div class="chip-7">
+          <img src="./img/chips/chip-7.png" />
+        </div>
+        <div class="chip-8">
+          <img src="./img/chips/chip-8.png" />
+        </div>
+        <div class="chip-9 netbook-hidden">
+          <img src="./img/chips/chip-9.png" />
+        </div>
+      </div>
+      <section class="advantages-section">
+        <div class="container">
+          <div class="advantages-section__wrapper">
+            <div class="advantages-section__item">
+              <div class="advantages-section__item-title h2 is-title">100 000+</div>
+              <div class="advantages-section__item-text">Transactions per day</div>
+            </div>
+            <div class="advantages-section__item">
+              <div class="advantages-section__item-title h2 is-title">9000+</div>
+              <div class="advantages-section__item-text">Clients</div>
+            </div>
+            <div class="advantages-section__item">
+              <div class="advantages-section__item-title h2 is-title">7+</div>
+              <div class="advantages-section__item-text">Years in business</div>
+            </div>
+            <div class="advantages-section__item">
+              <div class="advantages-section__item-title h2 is-title">24/7</div>
+              <div class="advantages-section__item-text">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="chips-container is-2">
+        <div class="chip-10 netbook-hidden">
+          <img src="./img/chips/chip-10.png" />
+        </div>
+        <div class="chip-11">
+          <img src="./img/chips/chip-11.png" />
+        </div>
+        <div class="chip-12">
+          <img src="./img/chips/chip-12.png" />
+        </div>
+      </div>
+      <section class="bt-kassa-section bt-section">
+        <div class="bt-kassa-section__video-bg">
+          <video
+            autoplay
+            loop
+            playsinline
+            muted
+            preload="metadata"
+            width="934px"
+            height="934px"
+            poster="./img/annimation-1-postrer-min.png"
+          >
+            <source src="./videos/annimation-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="bt-kassa-section__glow">
+          <img src="./img/glows/bt-kassa-glow.svg" alt="" class="initial" />
+        </div>
+        <div class="container">
+          <div class="bt-section__container">
+            <div class="bt-section__logo"><img src="./img/bt-kassa-logo.svg" alt="" /></div>
+            <div class="bt-section__title h2 is-title">Payment acceptance service from all over the world</div>
+            <div class="bt-kassa-advantages">
+              <div class="bt-kassa-advantages__item">
+                <div class="bt-kassa-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M25.3847 15.7695C25.3847 22.3769 20.1966 27.6925 13.8463 27.6925C7.49589 27.6925 2.30781 22.3769 2.30781 15.7695C2.30781 9.16204 7.49589 3.84638 13.8463 3.84638C20.1966 3.84638 25.3847 9.16204 25.3847 15.7695Z"
+                      stroke="#44B2CA"
+                      stroke-width="1.53846"
+                    />
+                    <path
+                      d="M37.6923 24.9999C37.6923 31.6073 32.5043 36.923 26.1539 36.923C19.8035 36.923 14.6154 31.6073 14.6154 24.9999C14.6154 18.3925 19.8035 13.0768 26.1539 13.0768C32.5043 13.0768 37.6923 18.3925 37.6923 24.9999Z"
+                      stroke="#44B2CA"
+                      stroke-width="1.53846"
+                    />
+                    <path d="M33.8462 1.53857H38.4616V6.92319" stroke="#44B2CA" stroke-width="1.53846" />
+                    <path d="M6.15381 38.4614L1.53842 38.4614L1.53842 33.846" stroke="#44B2CA" stroke-width="1.53846" />
+                  </svg>
+                </div>
+                <div class="bt-kassa-advantages__item-text">Multi-currency <br />acquiring</div>
+              </div>
+              <div class="bt-kassa-advantages__item">
+                <div class="bt-kassa-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M36.6924 35.9229L11.5385 35.9229C7.41764 35.9229 4.077 32.5822 4.077 28.4613C4.07699 24.3404 7.41764 20.9998 11.5385 20.9998L36.6924 20.9998L36.6924 35.9229Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M16.6924 3.30747L16.6924 14.5086L5.49121 3.30747L16.6924 3.30747Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <rect
+                      x="36.6924"
+                      y="15.9229"
+                      width="12.6154"
+                      height="12.6154"
+                      transform="rotate(180 36.6924 15.9229)"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="bt-kassa-advantages__item-text">
+                  Accepting payments <br />
+                  in cryptocurrency
+                </div>
+              </div>
+              <div class="bt-kassa-advantages__item">
+                <div class="bt-kassa-advantages__item-icon">
+                  <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      x="4.57715"
+                      y="35.9229"
+                      width="32.6154"
+                      height="14.9231"
+                      transform="rotate(-90 4.57715 35.9229)"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="30.8848"
+                      cy="29.6152"
+                      r="6.30769"
+                      transform="rotate(-90 30.8848 29.6152)"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="30.8848"
+                      cy="9.61516"
+                      r="6.30769"
+                      transform="rotate(-90 30.8848 9.61516)"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="bt-kassa-advantages__item-text">
+                  Payment bot for small <br />
+                  businesses
+                </div>
+              </div>
+              <div class="bt-kassa-advantages__item">
+                <div class="bt-kassa-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.00011 19.6155C1.00011 16.9816 3.13537 14.8463 5.76934 14.8463C8.40332 14.8463 10.5386 16.9816 10.5386 19.6155C10.5386 22.2495 8.40332 24.3848 5.76934 24.3848C3.13537 24.3848 1.00011 22.2495 1.00011 19.6155Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M29.4615 19.6155C29.4615 16.9816 31.5968 14.8463 34.2308 14.8463C36.8647 14.8463 39 16.9816 39 19.6155C39 22.2495 36.8647 24.3848 34.2308 24.3848C31.5968 24.3848 29.4615 22.2495 29.4615 19.6155Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M32.9657 2.08706L20.1094 14.9434L7.25308 2.08707L32.9657 2.08706Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M32.9657 38.2411L20.1094 25.3848L7.25308 38.2411L32.9657 38.2411Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="bt-kassa-advantages__item-text">
+                  Smart-routing and <br />
+                  cascading
+                </div>
+              </div>
+              <div class="bt-kassa-advantages__item">
+                <div class="bt-kassa-advantages__item-icon">
+                  <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.00011 20.6155C1.00011 17.9816 3.13537 15.8463 5.76934 15.8463C8.40332 15.8463 10.5386 17.9816 10.5386 20.6155C10.5386 23.2495 8.40332 25.3848 5.76934 25.3848C3.13537 25.3848 1.00011 23.2495 1.00011 20.6155Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M20.0003 39.6151C17.3663 39.6151 15.2311 37.4799 15.2311 34.8459C15.2311 32.2119 17.3663 30.0767 20.0003 30.0767C22.6343 30.0767 24.7695 32.2119 24.7695 34.8459C24.7695 37.4799 22.6343 39.6151 20.0003 39.6151Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M29.4615 20.6155C29.4615 17.9816 31.5968 15.8463 34.2308 15.8463C36.8647 15.8463 39 17.9816 39 20.6155C39 23.2495 36.8647 25.3848 34.2308 25.3848C31.5968 25.3848 29.4615 23.2495 29.4615 20.6155Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M19.9998 11.1537C17.3658 11.1537 15.2306 9.01844 15.2306 6.38447C15.2306 3.75049 17.3658 1.61524 19.9998 1.61524C22.6338 1.61523 24.769 3.75049 24.769 6.38446C24.769 9.01844 22.6338 11.1537 19.9998 11.1537Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="bt-kassa-advantages__item-text">
+                  We offer flexible <br />
+                  solutions
+                </div>
+              </div>
+              <div class="bt-kassa-advantages__item">
+                <div class="bt-kassa-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M32.9652 11.8561L20.1089 24.7124L7.25259 11.8561L32.9652 11.8561Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                    <path d="M12 6.5H27" stroke="#44B2CA" stroke-width="2" />
+                    <path d="M12 33H27" stroke="#44B2CA" stroke-width="2" />
+                    <path
+                      d="M32.9627 28.5687L20.1064 15.7124L7.25015 28.5687L32.9627 28.5687Z"
+                      stroke="#44B2CA"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <div class="bt-kassa-advantages__item-text">
+                  Customise mass <br />
+                  payments
+                </div>
+              </div>
+            </div>
+            <a href="./" class="bt-kassa-section__button button is-ghost is-center">More info</a>
+          </div>
+        </div>
+      </section>
+      <div class="chips-container is-3">
+        <div class="chip-13">
+          <img src="./img/chips/chip-13.png" />
+        </div>
+        <div class="chip-14">
+          <img src="./img/chips/chip-14.png" />
+        </div>
+      </div>
+      <section class="bt-exchanger-section bt-section">
+        <div class="container">
+          <div class="bt-section__container">
+            <div class="bt-section__logo"><img src="./img/bt-exchanger-logo.svg" alt="" /></div>
+            <div class="bt-section__title h2 is-title">High-speed exchange service for fiat and cryptocurrencies</div>
+            <div class="bt-exchanger-advantages">
+              <div class="bt-exchanger-advantages__item">
+                <div class="bt-exchanger-advantages__item-text">Over 9000 reviews from real customers</div>
+                <div class="bt-exchanger-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.4" clip-path="url(#clip0_995_160)">
+                      <circle
+                        cx="25.0331"
+                        cy="25.0336"
+                        r="12.75"
+                        transform="rotate(150 25.0331 25.0336)"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                      <path d="M2.875 2.875H24.625V24.625H2.875V2.875Z" stroke="white" stroke-width="2" />
+                      <path d="M25 38.75V25H38.75" stroke="white" stroke-width="2" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_995_160">
+                        <rect width="40" height="40" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="bt-exchanger-advantages__item">
+                <div class="bt-exchanger-advantages__item-text">
+                  Beneficial <br />
+                  rate
+                </div>
+                <div class="bt-exchanger-advantages__item-icon">
+                  <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.4" clip-path="url(#clip0_995_268)">
+                      <g clip-path="url(#clip1_995_268)">
+                        <path
+                          d="M27.8641 25.647L2.00209 25.647L14.9331 3.24985L27.8641 25.647Z"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <rect x="17.083" y="15.4531" width="21.75" height="21.75" stroke="white" stroke-width="2" />
+                        <rect x="28.2378" y="26.4863" width="10.5" height="10.5" stroke="white" stroke-width="2" />
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_995_268">
+                        <rect width="40" height="40" fill="white" transform="translate(0.333496)" />
+                      </clipPath>
+                      <clipPath id="clip1_995_268">
+                        <rect width="40" height="37.5" fill="white" transform="translate(0.333496 1.25)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="bt-exchanger-advantages__item">
+                <div class="bt-exchanger-advantages__item-text">High speed of payment processing</div>
+                <div class="bt-exchanger-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.4" clip-path="url(#clip0_995_160)">
+                      <circle
+                        cx="25.0331"
+                        cy="25.0336"
+                        r="12.75"
+                        transform="rotate(150 25.0331 25.0336)"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                      <path d="M2.875 2.875H24.625V24.625H2.875V2.875Z" stroke="white" stroke-width="2" />
+                      <path d="M25 38.75V25H38.75" stroke="white" stroke-width="2" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_995_160">
+                        <rect width="40" height="40" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="bt-exchanger-advantages__item">
+                <div class="bt-exchanger-advantages__item-text">High speed of payment processing</div>
+                <div class="bt-exchanger-advantages__item-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.4" clip-path="url(#clip0_995_195)">
+                      <g clip-path="url(#clip1_995_195)">
+                        <rect
+                          x="2.25"
+                          y="37.75"
+                          width="21.75"
+                          height="21.75"
+                          transform="rotate(-90 2.25 37.75)"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M2.25 37.75L2.25 27.25L24 27.25L24 37.75L2.25 37.75Z"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M2.25 37.75L2.25 27.25L12.75 27.25L12.75 37.75L2.25 37.75Z"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M31.1379 3.14292C37.2524 6.67313 39.3767 14.3729 35.9397 20.3259C32.5027 26.2789 24.7723 28.2892 18.6578 24.759C12.5433 21.2288 10.4191 13.5289 13.856 7.57595C17.293 1.62294 25.0234 -0.387291 31.1379 3.14292Z"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_995_195">
+                        <rect width="40" height="40" fill="white" transform="translate(40) rotate(90)" />
+                      </clipPath>
+                      <clipPath id="clip1_995_195">
+                        <rect width="40" height="40" fill="white" transform="translate(40) rotate(90)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <a href="./" class="bt-exchanger-section__button button is-ghost is-center">More info</a>
+          </div>
+        </div>
+      </section>
+      <section class="cources-section">
+        <div class="cources-section__bg"><style>
+  #wavesContainer {
+    width: 100%;
+    max-width: 1980px;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+  }
+  #wavesVeil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+  }
+</style>
+<div id="wavesContainer"></div>
+<div id="wavesVeil"></div>
+</div>
+        <div class="container">
+          <div class="cources-section__container">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18 16.7617H27.3692C29.4462 16.7617 31.1308 18.631 31.1308 20.5233C31.1308 22.6002 29.4462 24.2848 27.3692 24.2848H18V16.7617Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M18 24.2617H28.7077C31.0846 24.2617 33 25.9463 33 28.0233C33 30.1002 31.0846 31.7848 28.7077 31.7848H18V24.2617Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24.5537 31.7617V35.5233"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M19.8691 31.7617V35.5233"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24.5537 13V16.7615"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M19.8691 13V16.7615"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21.5539 16.7617H15"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21.5539 31.7617H15"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+
+                      BTC / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">26 402,5</div>
+                      <div class="cources-section__item-price-2">26 412,76</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20.8998 6.10012L13.4198 15.4201C11.7198 17.5401 12.3198 20.2601 14.7398 21.4601L22.1998 25.2001C23.1798 25.6801 24.7798 25.6801 25.7598 25.2001L33.2198 21.4601C35.6398 20.2401 36.2398 17.5201 34.5398 15.4201L27.0798 6.10012C25.3998 3.96012 22.5998 3.96012 20.8998 6.10012Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24 4.60059V15.1206"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.5996 21.4201L23.9996 15.1201L32.3996 21.4201"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5397 28.8603L20.7597 30.3003C22.8197 31.2203 25.1797 31.2203 27.2597 30.3003L30.4797 28.8603C33.3597 27.5803 36.0197 31.0603 34.0197 33.5003L27.0997 41.9603C25.3997 44.0403 22.6197 44.0403 20.8997 41.9603L13.9997 33.5003C11.9797 31.0603 14.6397 27.5803 17.5397 28.8603Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      ETH / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">1 402,5</div>
+                      <div class="cources-section__item-price-2">1 410,4</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.2 12.7998H28.2L24 28.5998H32.4L31.4 34.1998H16L22 12.7998H23.2Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M30.0001 22L14.6001 25"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      LTC / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">64,85</div>
+                      <div class="cources-section__item-price-2">65,11</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.9999 4H8.19988C6.19988 4 5.19988 6.2 6.59988 7.6L17.9999 19C21.1999 22.2 26.5999 22.2 29.7999 19L41.1999 7.6C42.7999 6.2 41.7999 4 39.7999 4H36.9999C35.3999 4 33.7999 4.6 32.5999 5.8L25.3999 13C24.5999 13.8 23.1999 13.8 22.3999 13L15.3999 5.8C14.1999 4.6 12.5999 4 10.9999 4Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.0001 43.9996H8.20008C6.40008 43.9996 5.40008 41.7996 6.80008 40.3996L18.0001 28.9996C21.2001 25.7996 26.6001 25.7996 29.8001 28.9996L41.2001 40.3996C42.6001 41.7996 41.6001 43.9996 39.8001 43.9996H37.0001C35.4001 43.9996 33.8001 43.3996 32.6001 42.1996L25.4001 34.9996C24.6001 34.1996 23.2001 34.1996 22.4001 34.9996L15.2001 42.1996C14.2001 43.1996 12.6001 43.9996 11.0001 43.9996Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      XRP / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">0,51</div>
+                      <div class="cources-section__item-price-2">0,52</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.9399 6.7002H33.0599C35.1799 6.7002 37.6799 8.2402 38.6199 10.1402L43.4199 19.7802C44.5799 22.1002 43.9399 25.4002 42.0399 27.1402L28.1799 39.7202C25.8799 41.8002 22.1399 41.8002 19.8399 39.7202L5.97991 27.1402C4.05991 25.4002 3.43991 22.1002 4.59991 19.7802L9.39991 10.1402C10.3199 8.2402 12.8199 6.7002 14.9399 6.7002Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24 29V17"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16 17H32"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      USDt / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">1</div>
+                      <div class="cources-section__item-price-2">1,01</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M27.5 20C28.6046 20 29.5 19.1046 29.5 18C29.5 16.8954 28.6046 16 27.5 16C26.3954 16 25.5 16.8954 25.5 18C25.5 19.1046 26.3954 20 27.5 20Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M20.5 20C21.6046 20 22.5 19.1046 22.5 18C22.5 16.8954 21.6046 16 20.5 16C19.3954 16 18.5 16.8954 18.5 18C18.5 19.1046 19.3954 20 20.5 20Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M31 26C32.1046 26 33 25.1046 33 24C33 22.8954 32.1046 22 31 22C29.8954 22 29 22.8954 29 24C29 25.1046 29.8954 26 31 26Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M34.2998 19.5C35.1282 19.5 35.7998 18.8284 35.7998 18C35.7998 17.1716 35.1282 16.5 34.2998 16.5C33.4714 16.5 32.7998 17.1716 32.7998 18C32.7998 18.8284 33.4714 19.5 34.2998 19.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M34.2998 31.5C35.1282 31.5 35.7998 30.8284 35.7998 30C35.7998 29.1716 35.1282 28.5 34.2998 28.5C33.4714 28.5 32.7998 29.1716 32.7998 30C32.7998 30.8284 33.4714 31.5 34.2998 31.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M39.5 25.5C40.3284 25.5 41 24.8284 41 24C41 23.1716 40.3284 22.5 39.5 22.5C38.6716 22.5 38 23.1716 38 24C38 24.8284 38.6716 25.5 39.5 25.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M13.6001 19.5C14.4285 19.5 15.1001 18.8284 15.1001 18C15.1001 17.1716 14.4285 16.5 13.6001 16.5C12.7717 16.5 12.1001 17.1716 12.1001 18C12.1001 18.8284 12.7717 19.5 13.6001 19.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M13.6001 31.5C14.4285 31.5 15.1001 30.8284 15.1001 30C15.1001 29.1716 14.4285 28.5 13.6001 28.5C12.7717 28.5 12.1001 29.1716 12.1001 30C12.1001 30.8284 12.7717 31.5 13.6001 31.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M8.3999 25.5C9.22833 25.5 9.8999 24.8284 9.8999 24C9.8999 23.1716 9.22833 22.5 8.3999 22.5C7.57147 22.5 6.8999 23.1716 6.8999 24C6.8999 24.8284 7.57147 25.5 8.3999 25.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M31.7998 11.9004C32.6282 11.9004 33.2998 11.2288 33.2998 10.4004C33.2998 9.57196 32.6282 8.90039 31.7998 8.90039C30.9714 8.90039 30.2998 9.57196 30.2998 10.4004C30.2998 11.2288 30.9714 11.9004 31.7998 11.9004Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M16.2002 11.9004C17.0286 11.9004 17.7002 11.2288 17.7002 10.4004C17.7002 9.57196 17.0286 8.90039 16.2002 8.90039C15.3718 8.90039 14.7002 9.57196 14.7002 10.4004C14.7002 11.2288 15.3718 11.9004 16.2002 11.9004Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M24.1001 13.5C24.9285 13.5 25.6001 12.8284 25.6001 12C25.6001 11.1716 24.9285 10.5 24.1001 10.5C23.2717 10.5 22.6001 11.1716 22.6001 12C22.6001 12.8284 23.2717 13.5 24.1001 13.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M31.7998 39.5C32.6282 39.5 33.2998 38.8284 33.2998 38C33.2998 37.1716 32.6282 36.5 31.7998 36.5C30.9714 36.5 30.2998 37.1716 30.2998 38C30.2998 38.8284 30.9714 39.5 31.7998 39.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M16.2002 39.5C17.0286 39.5 17.7002 38.8284 17.7002 38C17.7002 37.1716 17.0286 36.5 16.2002 36.5C15.3718 36.5 14.7002 37.1716 14.7002 38C14.7002 38.8284 15.3718 39.5 16.2002 39.5Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M24.1001 37.9004C24.9285 37.9004 25.6001 37.2288 25.6001 36.4004C25.6001 35.572 24.9285 34.9004 24.1001 34.9004C23.2717 34.9004 22.6001 35.572 22.6001 36.4004C22.6001 37.2288 23.2717 37.9004 24.1001 37.9004Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M17 26C18.1046 26 19 25.1046 19 24C19 22.8954 18.1046 22 17 22C15.8954 22 15 22.8954 15 24C15 25.1046 15.8954 26 17 26Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M20.5 32C21.6046 32 22.5 31.1046 22.5 30C22.5 28.8954 21.6046 28 20.5 28C19.3954 28 18.5 28.8954 18.5 30C18.5 31.1046 19.3954 32 20.5 32Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M27.5 32C28.6046 32 29.5 31.1046 29.5 30C29.5 28.8954 28.6046 28 27.5 28C26.3954 28 25.5 28.8954 25.5 30C25.5 31.1046 26.3954 32 27.5 32Z"
+                          stroke="white"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M24 4.90039V4.90039"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M35 5.7002V5.7002"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M35 42.4004V42.4004"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M40 33V33"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M40 14V14"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 33V33"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 14V14"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13 5.7002V5.7002"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13 42.4004V42.4004"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M24 43V43"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.1001 24V24"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M45 24V24"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      ADA / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">0,22</div>
+                      <div class="cources-section__item-price-2">0,23</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cources-section__item">
+                    <div class="cources-section__item-header">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M39.9999 7H10.9999C10.3999 7 9.79989 7.2 9.39989 7.8L6.39989 11.8C5.39989 13.2 6.39989 15 7.99989 15H36.9999C37.5999 15 38.1999 14.8 38.5999 14.2L41.5999 10.2C42.5999 8.8 41.5999 7 39.9999 7Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M7.99989 20H36.9999C37.5999 20 38.1999 20.2 38.5999 20.8L41.5999 24.8C42.5999 26.2 41.5999 28 39.9999 28H10.9999C10.3999 28 9.79989 27.8 9.39989 27.2L6.39989 23.2C5.39989 21.8 6.39989 20 7.99989 20Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M39.9999 33H10.9999C10.3999 33 9.79989 33.2 9.39989 33.8L6.39989 37.8C5.39989 39.2 6.39989 41 7.99989 41H36.9999C37.5999 41 38.1999 40.8 38.5999 40.2L41.5999 36.2C42.5999 34.8 41.5999 33 39.9999 33Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+
+                      SOL / USD
+                    </div>
+                    <div class="cources-section__item-footer">
+                      <div class="cources-section__item-price-1 is-title">20,47</div>
+                      <div class="cources-section__item-price-2">21,27</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </section>
+      <div class="chips-container is-4">
+        <div class="chip-15">
+          <img src="./img/chips/chip-15.png" />
+        </div>
+        <div class="chip-16">
+          <img src="./img/chips/chip-16.png" />
+        </div>
+      </div>
+      <section class="bt-wallet-section bt-section">
+        <div class="bt-wallet-section__video-bg">
+          <video
+            autoplay
+            loop
+            playsinline
+            muted
+            preload="metadata"
+            width="733px"
+            height="733px"
+            poster="./img/annimation-2-postrer-min.png"
+          >
+            <source src="./videos/annimation-2-3.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="bt-wallet-section__glow">
+          <div class="bt-wallet-section__glow-left">
+            <img src="./img/glows/bt-wallet-glow-1.png" alt="" />
+          </div>
+          <div class="bt-wallet-section__glow-right">
+            <img src="./img/glows/bt-wallet-glow-2.png" alt="" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="bt-section__container">
+            <div class="bt-section__logo"><img src="./img/bt-wallet-logo.svg" alt="" /></div>
+            <div class="bt-section__title h2 is-title">
+              The reliable wallet providing you transcendence in the crypto world
+            </div>
+            <div class="bt-wallet-advantages">
+              <div class="bt-wallet-advantages__item">
+                <div class="bt-wallet-advantages__item-text">Unlimited number <br />of e-wallets</div>
+              </div>
+              <div class="bt-wallet-advantages__item">
+                <div class="bt-wallet-advantages__item-text">
+                  Wide choice of fiat <br />
+                  and cryptocurrencies
+                </div>
+              </div>
+              <div class="bt-wallet-advantages__item">
+                <div class="bt-wallet-advantages__item-text">
+                  KYC/AML <br />
+                  compliance
+                </div>
+              </div>
+              <div class="bt-wallet-advantages__item">
+                <div class="bt-wallet-advantages__item-text">
+                  Favourable terms <br />
+                  and low commissions
+                </div>
+              </div>
+              <div class="bt-wallet-advantages__item">
+                <div class="bt-wallet-advantages__item-text">Reliable partners <br />network</div>
+              </div>
+            </div>
+            <a href="./" class="bt-wallet-section__button button is-ghost is-center">More info</a>
+          </div>
+        </div>
+      </section>
+      <section class="partners-section">
+        <div class="container is-full-w">
+          <div class="partners-section__title h4 is-title">Partners</div>
+          <div class="partners-section__container">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-4.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-5.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-6.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-7.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-8.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-9.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-10.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partners-section__item">
+                    <img src="./img/partners/partner-11.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </section>
+      <section class="blog-section">
+        <div class="container">
+          <div class="blog-section__title h4 is-title">Blog</div>
+          <div class="blog-section__wrapper">
+            <div class="blog-section__col">
+              <div class="blog-section__col-text is-title">
+                Writing about our new releases, market news and cool features you'll be interested in
+              </div>
+
+              <div class="blog-card tablet-hidden">
+                <div class="blog-card__glow"><img src="./img/blog/blog-2.jpg" /></div>
+                <a href="./" class="blog-card__img is-horizontal">
+                  <img src="./img/blog/blog-2.jpg" class="fit-cover" />
+                </a>
+                <a href="./" class="blog-card__title">
+                  Binance restrictions and the fall of bitcoin.
+                  <br />
+                  Main events of the week
+                </a>
+              </div>
+
+              <a href="./" class="button is-ghost tablet-hidden">More articles</a>
+            </div>
+            <div class="blog-section__col">
+              <div class="blog-card">
+                <div class="blog-card__glow"><img src="./img/blog/blog-1.jpg" /></div>
+                <a href="./" class="blog-card__img is-vertical"
+                  ><img src="./img/blog/blog-1.jpg" class="fit-cover"
+                /></a>
+                <a href="./" class="blog-card__title">
+                  JPMorgan has assessed the chances of <br />launching a bitcoin-ETF after Grayscale's win
+                </a>
+              </div>
+              <div class="blog-card tablet-visible">
+                <div class="blog-card__glow"><img src="./img/blog/blog-2.jpg" /></div>
+                <a href="./" class="blog-card__img is-horizontal">
+                  <img src="./img/blog/blog-2.jpg" class="fit-cover" />
+                </a>
+                <a href="./" class="blog-card__title">
+                  Binance restrictions and the fall of bitcoin.
+                  <br />
+                  Main events of the week
+                </a>
+              </div>
+              <div class="blog-card">
+                <div class="blog-card__glow"><img src="./img/blog/blog-3.jpg" /></div>
+                <a href="./" class="blog-card__img is-horizontal"
+                  ><img src="./img/blog/blog-3.jpg" class="fit-cover"
+                /></a>
+                <a href="./" class="blog-card__title">
+                  Bitcoin falls below $26k after ETF applications <br />
+                  postponed
+                </a>
+              </div>
+
+              <a href="./" class="blog-section__button button is-ghost tablet-visible">More articles</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="chips-container is-5">
+        <div class="chip-17">
+          <img src="./img/chips/chip-17.png" />
+        </div>
+        <div class="chip-18">
+          <img src="./img/chips/chip-18.png" />
+        </div>
+      </div>
+      <section class="ecosystem-section">
+        <div class="ecosystem-section__glow">
+          <img src="./img/glows/ecosystem-section-glow-min.png" alt="" class="initial" />
+        </div>
+        <div class="container">
+          <div class="ecosystem-section__wrapper">
+            <div class="ecosystem-section__video-box">
+              <video
+                autoplay
+                loop
+                playsinline
+                muted
+                preload="metadata"
+                width="1256px"
+                height="809px"
+                poster="./img/annimation-3-postrer-min.png"
+              >
+                <source src="./videos/annimation-3.mp4" type="video/mp4" />
+              </video>
+              <div class="ecosystem-section__video-box-text">
+                <svg
+                  class="text-1"
+                  width="998"
+                  height="127"
+                  viewBox="0 0 998 127"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M393.698 79.0049C393.698 88.2507 394.166 94.4838 395.102 97.7043C396.038 100.925 398.222 103.002 401.655 103.937C405.192 104.769 412.005 105.184 422.095 105.184V124.663C406.7 124.663 395.726 123.416 389.173 120.923C382.619 118.429 378.459 114.274 376.69 108.456C375.026 102.535 374.194 92.7178 374.194 79.0049V56.4098H357.031V36.4638H374.194V6.23312H393.698V36.4638H421.939V56.4098H393.698V79.0049Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M449.962 65.292C451.21 57.5006 453.29 51.5272 456.203 47.3718C459.115 43.2164 462.86 40.3595 467.437 38.8012C472.118 37.2429 478.151 36.4638 485.536 36.4638V58.1239C482.416 57.5006 479.503 57.189 476.799 57.189C468.581 57.189 462.236 59.7861 457.763 64.9804C453.394 70.0708 451.21 77.1869 451.21 86.3288V124.663H431.394V36.308H451.21L446.841 65.292H449.962Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M530.783 35.5288C545.45 35.5288 556.372 38.9571 563.549 45.8135C570.727 52.5661 574.315 62.7988 574.315 76.5117V124.663H555.124L558.244 94.7436H555.904C552.159 116.144 540.925 126.844 522.202 126.844C511.488 126.844 503.478 124.559 498.173 119.988C492.868 115.417 490.216 108.924 490.216 100.509C490.216 91.4712 493.805 84.407 500.982 79.3166C508.159 74.2262 518.509 71.681 532.032 71.681H554.812C553.772 66.1751 551.275 62.1235 547.322 59.5264C543.474 56.8254 537.961 55.4748 530.783 55.4748C525.79 55.4748 521.578 56.5137 518.145 58.5914C514.712 60.5652 511.436 63.6818 508.315 67.9411L492.4 57.189C497.393 50.0209 502.958 44.6188 509.095 40.9828C515.337 37.3468 522.566 35.5288 530.783 35.5288ZM525.166 106.742C533.904 106.742 540.613 104.872 545.294 101.133C549.975 97.3926 552.939 91.8867 554.188 84.6147H532.032C524.542 84.6147 519.029 85.6016 515.493 87.5755C511.956 89.4454 510.188 92.3542 510.188 96.3018C510.188 99.4184 511.436 101.964 513.932 103.937C516.429 105.807 520.173 106.742 525.166 106.742Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M640.619 34.1264C652.997 34.1264 662.255 37.9701 668.392 45.6577C674.633 53.3452 677.754 65.7595 677.754 82.9006V124.663H658.406V82.9006C658.406 73.0315 656.534 65.7595 652.789 61.0847C649.045 56.4098 643.116 54.0724 635.002 54.0724C626.785 54.0724 620.283 56.8773 615.498 62.4871C610.714 67.993 608.321 75.9403 608.321 86.3288V124.663H588.35V36.4638H608.321L603.952 65.292H606.917C608.165 56.9812 610.246 50.5922 613.158 46.1252C616.071 41.5542 619.711 38.4376 624.08 36.7755C628.553 35.0094 634.066 34.1264 640.619 34.1264Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M705.816 92.562C708.312 97.4446 711.433 101.184 715.178 103.782C719.026 106.275 723.915 107.521 729.844 107.521C742.535 107.521 748.88 104.769 748.88 99.2626C748.88 96.5616 747.632 94.4838 745.135 93.0295C742.639 91.5751 737.854 90.1726 730.781 88.8221L725.164 87.7313C713.305 85.5497 704.724 82.2254 699.419 77.7583C694.114 73.1873 691.461 67.162 691.461 59.6822C691.461 55.319 692.71 51.3194 695.206 47.6834C697.807 44.0474 701.759 41.1386 707.064 38.9571C712.473 36.6716 719.13 35.5288 727.036 35.5288C737.23 35.5288 745.343 37.6065 751.376 41.762C757.41 45.8135 762.402 51.9427 766.355 60.1497L749.66 68.0969C746.643 63.1104 743.419 59.6303 739.986 57.6564C736.554 55.5787 732.237 54.5399 727.036 54.5399C721.211 54.5399 716.998 55.2671 714.398 56.7215C711.901 58.072 710.653 59.89 710.653 62.1755C710.653 64.5648 711.641 66.4348 713.617 67.7853C715.698 69.1358 719.546 70.4344 725.164 71.681L730.781 72.7718C740.558 74.5378 748.1 76.7194 753.405 79.3166C758.814 81.9137 762.559 84.9264 764.639 88.3546C766.719 91.6789 767.759 95.7305 767.759 100.509C767.759 104.872 766.407 109.08 763.703 113.131C761.102 117.079 756.941 120.299 751.22 122.793C745.499 125.286 738.374 126.533 729.844 126.533C719.339 126.533 710.757 124.559 704.1 120.611C697.546 116.56 691.877 110.015 687.093 100.977L705.816 92.562Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M842.515 17.1411C833.882 17.0372 827.745 17.4008 824.104 18.2319C820.567 18.9591 818.123 20.6213 816.771 23.2184C815.523 25.8155 814.794 30.2307 814.586 36.4638H842.515V56.4098H814.43V124.663H794.927V56.4098H777.608V36.4638H794.927C795.135 26.8024 796.331 19.5305 798.515 14.6478C800.7 9.66135 805.121 5.97342 811.778 3.58405C818.435 1.19468 828.681 0 842.515 0V17.1411Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M865.543 87.2638C866.687 93.4969 869.496 98.4834 873.969 102.223C878.546 105.859 884.267 107.677 891.132 107.677C902.158 107.677 910.896 103.418 917.345 94.8994L930.607 103.937C926.55 111.625 921.037 117.391 914.068 121.234C907.099 125.078 899.453 127 891.132 127C882.914 127 875.321 124.974 868.352 120.923C861.382 116.767 855.817 111.209 851.657 104.249C847.6 97.1849 845.572 89.4974 845.572 81.1865C845.572 72.8757 847.6 65.2401 851.657 58.2798C855.817 51.3194 861.382 45.8135 868.352 41.762C875.321 37.6065 882.914 35.5288 891.132 35.5288C899.87 35.5288 907.567 37.7104 914.224 42.0736C920.881 46.4368 925.978 52.5661 929.515 60.4613C933.052 68.2528 934.664 77.1869 934.352 87.2638H865.543ZM891.132 54.5399C884.683 54.5399 879.17 56.4098 874.593 60.1497C870.12 63.7857 867.156 68.4605 865.699 74.1742H915.628C914.38 68.045 911.468 63.2663 906.891 59.838C902.418 56.3059 897.165 54.5399 891.132 54.5399Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M962.425 65.292C963.673 57.5006 965.753 51.5272 968.666 47.3718C971.578 43.2164 975.323 40.3595 979.9 38.8012C984.581 37.2429 990.614 36.4638 997.999 36.4638V58.1239C994.879 57.5006 991.966 57.189 989.262 57.189C981.044 57.189 974.699 59.7861 970.226 64.9804C965.857 70.0708 963.673 77.1869 963.673 86.3288V124.663H943.857V36.308H963.673L959.304 65.292H962.425Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M55.2342 35.5288C62.5155 35.5288 69.0687 37.6065 74.8938 41.762C80.8229 45.9174 85.5038 51.6311 88.9364 58.9031C92.369 66.0712 94.0854 74.1223 94.0854 83.0564C94.0854 90.8479 92.369 98.1199 88.9364 104.872C85.5038 111.625 80.8229 117.027 74.8938 121.079C68.9647 125.026 62.4115 127 55.2342 127C35.9906 127 24.6005 116.56 21.0639 95.6785H18.4114L19.9717 124.663H0V0H19.9717V36.4638L18.4114 65.1362H21.688C23.7684 55.6826 27.7211 48.4106 33.5462 43.3202C39.4753 38.126 46.7046 35.5288 55.2342 35.5288ZM48.3689 107.21C53.3618 107.21 57.8347 106.119 61.7874 103.937C65.7401 101.756 68.8087 98.7951 70.9931 95.0552C73.2815 91.2115 74.4257 86.9002 74.4257 82.1215C74.4257 74.5378 71.9813 68.3567 67.0924 63.5779C62.2035 58.6953 55.9623 56.254 48.3689 56.254C43.48 56.254 39.0592 57.3967 35.1065 59.6822C31.1537 61.8638 28.0332 64.9284 25.7447 68.8761C23.4563 72.7198 22.3121 76.9791 22.3121 81.654C22.3121 85.9133 23.4563 90.0168 25.7447 93.9644C28.1372 97.9121 31.3098 101.133 35.2625 103.626C39.3193 106.015 43.6881 107.21 48.3689 107.21Z"
+                    fill="#EBFF6E"
+                  />
+                  <path
+                    d="M123.438 87.2638C124.582 93.4969 127.391 98.4834 131.864 102.223C136.441 105.859 142.162 107.677 149.027 107.677C160.053 107.677 168.791 103.418 175.24 94.8994L188.502 103.937C184.446 111.625 178.932 117.391 171.963 121.234C164.994 125.078 157.349 127 149.027 127C140.809 127 133.216 124.974 126.247 120.923C119.277 116.767 113.712 111.209 109.552 104.249C105.495 97.1849 103.467 89.4974 103.467 81.1865C103.467 72.8757 105.495 65.2401 109.552 58.2798C113.712 51.3194 119.277 45.8135 126.247 41.762C133.216 37.6065 140.809 35.5288 149.027 35.5288C157.765 35.5288 165.462 37.7104 172.119 42.0736C178.776 46.4368 183.873 52.5661 187.41 60.4613C190.947 68.2528 192.559 77.1869 192.247 87.2638H123.438ZM149.027 54.5399C142.578 54.5399 137.065 56.4098 132.488 60.1497C128.015 63.7857 125.051 68.4605 123.594 74.1742H173.523C172.275 68.045 169.363 63.2663 164.786 59.838C160.313 56.3059 155.06 54.5399 149.027 54.5399Z"
+                    fill="#EBFF6E"
+                  />
+                  <path
+                    d="M232.172 79.0049C232.172 88.2507 232.64 94.4838 233.576 97.7043C234.512 100.925 236.697 103.002 240.129 103.937C243.666 104.769 250.479 105.184 260.569 105.184V124.663C245.174 124.663 234.2 123.416 227.647 120.923C221.094 118.429 216.933 114.274 215.165 108.456C213.501 102.535 212.668 92.7178 212.668 79.0049V56.4098H195.505V36.4638H212.668V6.23312H232.172V36.4638H260.413V56.4098H232.172V79.0049Z"
+                    fill="#EBFF6E"
+                  />
+                  <path
+                    d="M304.189 35.5288C318.856 35.5288 329.778 38.9571 336.955 45.8135C344.132 52.5661 347.721 62.7988 347.721 76.5117V124.663H328.53L331.65 94.7436H329.31C325.565 116.144 314.331 126.844 295.607 126.844C284.893 126.844 276.884 124.559 271.579 119.988C266.274 115.417 263.622 108.924 263.622 100.509C263.622 91.4712 267.21 84.407 274.388 79.3166C281.565 74.2262 291.915 71.681 305.437 71.681H328.217C327.177 66.1751 324.681 62.1235 320.728 59.5264C316.879 56.8254 311.366 55.4748 304.189 55.4748C299.196 55.4748 294.983 56.5137 291.551 58.5914C288.118 60.5652 284.841 63.6818 281.721 67.9411L265.806 57.189C270.799 50.0209 276.364 44.6188 282.501 40.9828C288.742 37.3468 295.972 35.5288 304.189 35.5288ZM298.572 106.742C307.31 106.742 314.019 104.872 318.7 101.133C323.381 97.3926 326.345 91.8867 327.593 84.6147H305.437C297.948 84.6147 292.435 85.6016 288.898 87.5755C285.362 89.4454 283.593 92.3542 283.593 96.3018C283.593 99.4184 284.841 101.964 287.338 103.937C289.834 105.807 293.579 106.742 298.572 106.742Z"
+                    fill="#EBFF6E"
+                  />
+                </svg>
+                <svg
+                  class="text-2"
+                  width="392"
+                  height="65"
+                  viewBox="0 0 392 65"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.926 34.92C9.41733 37.6 10.6233 39.744 12.544 41.352C14.5093 42.9153 16.966 43.697 19.914 43.697C24.6487 43.697 28.4007 41.8657 31.17 38.203L36.865 42.089C35.123 45.3943 32.7557 47.8733 29.763 49.526C26.7703 51.1787 23.4873 52.005 19.914 52.005C16.3853 52.005 13.1247 51.134 10.132 49.392C7.13933 47.6053 4.74967 45.2157 2.963 42.223C1.221 39.1857 0.35 35.8803 0.35 32.307C0.35 28.7337 1.221 25.4507 2.963 22.458C4.74967 19.4653 7.13933 17.098 10.132 15.356C13.1247 13.5693 16.3853 12.676 19.914 12.676C23.666 12.676 26.9713 13.614 29.83 15.49C32.6887 17.366 34.8773 20.0013 36.396 23.396C37.9147 26.746 38.607 30.5873 38.473 34.92H8.926ZM19.914 20.85C17.1447 20.85 14.7773 21.654 12.812 23.262C10.8913 24.8253 9.61833 26.8353 8.993 29.292H30.433C29.897 26.6567 28.6463 24.602 26.681 23.128C24.7603 21.6093 22.5047 20.85 19.914 20.85ZM79.5032 42.089C75.9745 48.6997 69.9445 52.005 61.4132 52.005C57.8845 52.005 54.6685 51.134 51.7652 49.392C48.9065 47.6053 46.6508 45.2157 44.9982 42.223C43.3902 39.1857 42.5862 35.8803 42.5862 32.307C42.5862 28.7337 43.3902 25.4507 44.9982 22.458C46.6508 19.4207 48.9065 17.031 51.7652 15.289C54.6685 13.547 57.8845 12.676 61.4132 12.676C65.7905 12.676 69.5425 13.5917 72.6692 15.423C75.7958 17.2543 78.2302 19.8897 79.9722 23.329L73.3392 27.885C71.6418 25.3837 69.9222 23.664 68.1802 22.726C66.4828 21.7433 64.4505 21.252 62.0832 21.252C58.8672 21.252 56.2318 22.2793 54.1772 24.334C52.1672 26.3887 51.1622 29.0463 51.1622 32.307C51.1622 35.7463 52.1672 38.471 54.1772 40.481C56.1872 42.4463 58.8225 43.429 62.0832 43.429C66.5052 43.429 70.0562 41.4637 72.7362 37.533L79.5032 42.089ZM104.374 52.005C100.845 52.005 97.6291 51.1117 94.7258 49.325C91.8224 47.5383 89.5221 45.104 87.8248 42.022C86.1721 38.94 85.3458 35.5677 85.3458 31.905C85.3458 28.287 86.1721 24.9593 87.8248 21.922C89.5221 18.8847 91.8224 16.4727 94.7258 14.686C97.6291 12.8993 100.845 12.006 104.374 12.006C107.902 12.006 111.118 12.8993 114.022 14.686C116.925 16.4727 119.203 18.8847 120.856 21.922C122.508 24.9593 123.335 28.287 123.335 31.905C123.335 35.5677 122.508 38.94 120.856 42.022C119.203 45.104 116.925 47.5383 114.022 49.325C111.118 51.1117 107.902 52.005 104.374 52.005ZM104.374 43.697C107.59 43.697 110.158 42.6027 112.079 40.414C113.999 38.1807 114.96 35.3667 114.96 31.972C114.96 28.5773 113.999 25.7857 112.079 23.597C110.158 21.4083 107.59 20.314 104.374 20.314C101.202 20.314 98.6341 21.4307 96.6688 23.664C94.7034 25.8527 93.7208 28.622 93.7208 31.972C93.7208 35.3667 94.7034 38.1807 96.6688 40.414C98.6341 42.6027 101.202 43.697 104.374 43.697ZM136.734 37.198C137.806 39.2973 139.146 40.9053 140.754 42.022C142.407 43.094 144.506 43.63 147.052 43.63C152.502 43.63 155.226 42.4463 155.226 40.079C155.226 38.9177 154.69 38.0243 153.618 37.399C152.546 36.7737 150.492 36.1707 147.454 35.59L145.042 35.121C139.95 34.183 136.265 32.7537 133.987 30.833C131.709 28.8677 130.57 26.277 130.57 23.061C130.57 21.185 131.106 19.4653 132.178 17.902C133.295 16.3387 134.992 15.088 137.27 14.15C139.593 13.1673 142.452 12.676 145.846 12.676C150.224 12.676 153.708 13.5693 156.298 15.356C158.889 17.098 161.033 19.7333 162.73 23.262L155.561 26.679C154.266 24.535 152.881 23.0387 151.407 22.19C149.933 21.2967 148.08 20.85 145.846 20.85C143.345 20.85 141.536 21.1627 140.419 21.788C139.347 22.3687 138.811 23.1503 138.811 24.133C138.811 25.1603 139.236 25.9643 140.084 26.545C140.978 27.1257 142.63 27.684 145.042 28.22L147.454 28.689C151.653 29.4483 154.891 30.3863 157.169 31.503C159.492 32.6197 161.1 33.915 161.993 35.389C162.887 36.8183 163.333 38.5603 163.333 40.615C163.333 42.491 162.753 44.3 161.591 46.042C160.475 47.7393 158.688 49.124 156.231 50.196C153.775 51.268 150.715 51.804 147.052 51.804C142.541 51.804 138.856 50.9553 135.997 49.258C133.183 47.516 130.749 44.702 128.694 40.816L136.734 37.198ZM206.288 13.078L198.181 47.047C197.154 51.469 195.635 54.9307 193.625 57.432C191.615 59.978 188.98 61.7647 185.719 62.792C182.458 63.864 178.304 64.4 173.257 64.4V56.427C177.456 56.427 180.404 56.3377 182.101 56.159C183.798 56.025 185.116 55.5783 186.054 54.819C186.992 54.1043 187.774 52.8313 188.399 51H178.751L168.902 13.078H177.545L186.054 45.774H189.806L197.645 13.078H206.288ZM219.702 37.198C220.774 39.2973 222.114 40.9053 223.722 42.022C225.374 43.094 227.474 43.63 230.02 43.63C235.469 43.63 238.194 42.4463 238.194 40.079C238.194 38.9177 237.658 38.0243 236.586 37.399C235.514 36.7737 233.459 36.1707 230.422 35.59L228.01 35.121C222.918 34.183 219.233 32.7537 216.955 30.833C214.677 28.8677 213.538 26.277 213.538 23.061C213.538 21.185 214.074 19.4653 215.146 17.902C216.262 16.3387 217.96 15.088 220.238 14.15C222.56 13.1673 225.419 12.676 228.814 12.676C233.191 12.676 236.675 13.5693 239.266 15.356C241.856 17.098 244 19.7333 245.698 23.262L238.529 26.679C237.233 24.535 235.849 23.0387 234.375 22.19C232.901 21.2967 231.047 20.85 228.814 20.85C226.312 20.85 224.503 21.1627 223.387 21.788C222.315 22.3687 221.779 23.1503 221.779 24.133C221.779 25.1603 222.203 25.9643 223.052 26.545C223.945 27.1257 225.598 27.684 228.01 28.22L230.422 28.689C234.62 29.4483 237.859 30.3863 240.137 31.503C242.459 32.6197 244.067 33.915 244.961 35.389C245.854 36.8183 246.301 38.5603 246.301 40.615C246.301 42.491 245.72 44.3 244.559 46.042C243.442 47.7393 241.655 49.124 239.199 50.196C236.742 51.268 233.682 51.804 230.02 51.804C225.508 51.804 221.823 50.9553 218.965 49.258C216.151 47.516 213.716 44.702 211.662 40.816L219.702 37.198ZM264.932 31.369C264.932 35.3443 265.133 38.0243 265.535 39.409C265.937 40.7937 266.875 41.687 268.349 42.089C269.868 42.4463 272.793 42.625 277.126 42.625V51C270.515 51 265.803 50.464 262.989 49.392C260.175 48.32 258.388 46.5333 257.629 44.032C256.914 41.486 256.557 37.265 256.557 31.369V21.654H249.187V13.078H256.557V0.0799966H264.932V13.078H277.059V21.654H264.932V31.369ZM291.035 34.92C291.527 37.6 292.733 39.744 294.653 41.352C296.619 42.9153 299.075 43.697 302.023 43.697C306.758 43.697 310.51 41.8657 313.279 38.203L318.974 42.089C317.232 45.3943 314.865 47.8733 311.872 49.526C308.88 51.1787 305.597 52.005 302.023 52.005C298.495 52.005 295.234 51.134 292.241 49.392C289.249 47.6053 286.859 45.2157 285.072 42.223C283.33 39.1857 282.459 35.8803 282.459 32.307C282.459 28.7337 283.33 25.4507 285.072 22.458C286.859 19.4653 289.249 17.098 292.241 15.356C295.234 13.5693 298.495 12.676 302.023 12.676C305.775 12.676 309.081 13.614 311.939 15.49C314.798 17.366 316.987 20.0013 318.505 23.396C320.024 26.746 320.716 30.5873 320.582 34.92H291.035ZM302.023 20.85C299.254 20.85 296.887 21.654 294.921 23.262C293.001 24.8253 291.728 26.8353 291.102 29.292H312.542C312.006 26.6567 310.756 24.602 308.79 23.128C306.87 21.6093 304.614 20.85 302.023 20.85ZM334.58 13.011L332.704 25.473H334.312C335.339 20.5597 337.193 17.098 339.873 15.088C342.553 13.078 345.59 12.073 348.985 12.073C352.871 12.073 355.908 13.2343 358.097 15.557C360.33 17.835 361.358 21.1403 361.179 25.473H362.787C363.814 20.5597 365.668 17.098 368.348 15.088C371.028 13.078 374.065 12.073 377.46 12.073C382.061 12.073 385.545 13.6363 387.912 16.763C390.324 19.8897 391.53 25.3167 391.53 33.044V51H383.222V33.044C383.222 24.7807 380.229 20.649 374.244 20.649C370.715 20.649 367.968 21.855 366.003 24.267C364.038 26.6343 363.055 30.0513 363.055 34.518V51H354.747V33.044C354.747 24.7807 351.754 20.649 345.769 20.649C342.24 20.649 339.493 21.855 337.528 24.267C335.563 26.6343 334.58 30.0513 334.58 34.518V51H326.004V13.011H334.58Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="ecosystem-section__footer">
+              <div class="ecosystem-section__description">
+                Register once and get access to all <br />
+                our products and services
+              </div>
+              <a href="./" class="button is-ghost is-center">Create account</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="chips-container is-6">
+        <div class="chip-19">
+          <img src="./img/chips/chip-19.png" />
+        </div>
+      </div>
+      <section class="intouch-section">
+        <div class="intouch-section__glow">
+          <img src="./img/glows/intouch-section-glow.png" class="initial" />
+        </div>
+        <div class="container">
+          <div class="intouch-section__title h2 is-title">We are in touch 24/7</div>
+          <div class="intouch-section__subtitle">Any other questions? Contact us!</div>
+          <div class="intouch-section__links">
+            <a href="./" class="intouch-section__link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.799805 7.20039L11.9998 13.6004L23.1998 7.20039M2.3998 2.40039H21.5998C22.4835 2.40039 23.1998 3.11674 23.1998 4.00039V20.0004C23.1998 20.884 22.4835 21.6004 21.5998 21.6004H2.39981C1.51615 21.6004 0.799805 20.884 0.799805 20.0004V4.00039C0.799805 3.11673 1.51615 2.40039 2.3998 2.40039Z"
+                  stroke="white"
+                />
+              </svg>
+              <span class="intouch-section__link-text tablet-hidden">Email</span>
+            </a>
+            <a href="./" class="intouch-section__link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.1998 2.40039L0.799805 10.4004L7.1998 13.6004L16.7998 7.20039L10.3998 15.2004L19.9998 21.6004L23.1998 2.40039Z"
+                  stroke="white"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="intouch-section__link-text tablet-hidden">Telegram</span>
+            </a>
+            <a href="./" class="intouch-section__link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.03948 18.7214L3.48669 18.945L3.62501 18.6684L3.43924 18.4211L3.03948 18.7214ZM5.27915 20.9611L5.57947 20.5613L5.33218 20.3756L5.05554 20.5139L5.27915 20.9611ZM0.799805 23.2008L0.352591 22.9772C0.256344 23.1697 0.294071 23.4022 0.446251 23.5543C0.598431 23.7065 0.830917 23.7442 1.02341 23.648L0.799805 23.2008ZM7.1998 7.20078L6.92245 6.78476C6.78336 6.87749 6.6998 7.0336 6.6998 7.20078H7.1998ZM16.7998 16.8008V17.3008C16.967 17.3008 17.1231 17.2172 17.2158 17.0781L16.7998 16.8008ZM10.0066 8.04165L10.4998 7.95945L10.0066 8.04165ZM10.2297 9.38032L9.73653 9.46252L10.2297 9.38032ZM9.53902 10.9746L9.81637 11.3907H9.81637L9.53902 10.9746ZM15.9589 13.994L16.0411 13.5008V13.5008L15.9589 13.994ZM14.6203 13.7709L14.5381 14.2641L14.6203 13.7709ZM13.0259 14.4616L12.6099 14.1842L13.0259 14.4616ZM0.299805 12.0008C0.299805 14.6344 1.17058 17.0661 2.63972 19.0218L3.43924 18.4211C2.09573 16.6327 1.2998 14.4104 1.2998 12.0008H0.299805ZM11.9998 0.300781C5.53807 0.300781 0.299805 5.53905 0.299805 12.0008H1.2998C1.2998 6.09133 6.09036 1.30078 11.9998 1.30078V0.300781ZM23.6998 12.0008C23.6998 5.53905 18.4615 0.300781 11.9998 0.300781V1.30078C17.9093 1.30078 22.6998 6.09133 22.6998 12.0008H23.6998ZM11.9998 23.7008C18.4615 23.7008 23.6998 18.4625 23.6998 12.0008H22.6998C22.6998 17.9102 17.9093 22.7008 11.9998 22.7008V23.7008ZM4.97883 21.3609C6.93444 22.83 9.36615 23.7008 11.9998 23.7008V22.7008C9.59015 22.7008 7.36784 21.9049 5.57947 20.5613L4.97883 21.3609ZM1.02341 23.648L5.50276 21.4083L5.05554 20.5139L0.576198 22.7536L1.02341 23.648ZM2.59226 18.4978L0.352591 22.9772L1.24702 23.4244L3.48669 18.945L2.59226 18.4978ZM6.6998 7.20078V8.80078H7.6998V7.20078H6.6998ZM15.1998 17.3008H16.7998V16.3008H15.1998V17.3008ZM6.6998 8.80078C6.6998 13.4952 10.5054 17.3008 15.1998 17.3008V16.3008C11.0577 16.3008 7.6998 12.9429 7.6998 8.80078H6.6998ZM7.47715 7.61681L7.81822 7.38943L7.26352 6.55738L6.92245 6.78476L7.47715 7.61681ZM9.51342 8.12385L9.73653 9.46252L10.7229 9.29812L10.4998 7.95945L9.51342 8.12385ZM9.26167 10.5586L7.72245 11.5848L8.27715 12.4168L9.81637 11.3907L9.26167 10.5586ZM9.73653 9.46252C9.80769 9.88949 9.62183 10.3185 9.26167 10.5586L9.81637 11.3907C10.504 10.9323 10.8588 10.1132 10.7229 9.29812L9.73653 9.46252ZM7.81822 7.38943C8.48238 6.94666 9.38219 7.33649 9.51342 8.12385L10.4998 7.95945C10.2493 6.4563 8.53146 5.71209 7.26352 6.55738L7.81822 7.38943ZM17.2158 17.0781L17.4432 16.7371L16.6112 16.1824L16.3838 16.5234L17.2158 17.0781ZM16.0411 13.5008L14.7025 13.2777L14.5381 14.2641L15.8767 14.4872L16.0411 13.5008ZM12.6099 14.1842L11.5838 15.7234L12.4158 16.2781L13.442 14.7389L12.6099 14.1842ZM14.7025 13.2777C13.8873 13.1418 13.0683 13.4966 12.6099 14.1842L13.442 14.7389C13.6821 14.3788 14.1111 14.1929 14.5381 14.2641L14.7025 13.2777ZM17.4432 16.7371C18.2885 15.4691 17.5443 13.7513 16.0411 13.5008L15.8767 14.4872C16.6641 14.6184 17.0539 15.5182 16.6112 16.1824L17.4432 16.7371Z"
+                  fill="white"
+                />
+              </svg>
+              <span class="intouch-section__link-text tablet-hidden">Whats App</span>
+            </a>
+          </div>
+          <div class="intouch-section__form-box">
+            <div class="intouch-section__form-box-title">Or feel the form below</div>
+            <form action="#" class="intouch-section__form">
+              <label class="form-input is-required">
+                <input type="text" class="input" placeholder=" " />
+                <div class="form-input__placeholder">Name</div>
+              </label>
+              <label class="form-input is-required">
+                <input type="text" class="input" placeholder=" " />
+                <div class="form-input__placeholder">Email / Telegram / Whats app</div>
+              </label>
+              <label class="form-input is-required is-textarea">
+                <textarea class="input textarea" placeholder=" "></textarea>
+                <div class="form-input__placeholder">Message</div>
+              </label>
+              <button type="submit" class="button is-ghost is-center">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__left">
+        <div class="footer__copy netbook-hidden">© Betatransfer 2023. All right reserved.</div>
+        <div class="footer__nav">
+          <a href="./about.html" class="is-underline-out">About company</a>
+          <a href="./privacy.html" class="is-underline-out">Privacy policy</a>
+          <a href="./security.html" class="is-underline-out">Security</a>
+        </div>
+      </div>
+      <div class="footer__right">
+        <div class="footer__social">
+          <a href="./" target="_blank"><img src="./img/social-media/Facebook.svg" alt="" /></a>
+          <a href="./" target="_blank"><img src="./img/social-media/Instagram.svg" alt="" /></a>
+          <a href="./" target="_blank"><img src="./img/social-media/Youtube.svg" alt="" /></a>
+          <a href="./" target="_blank"><img src="./img/social-media/Tik-Tok.svg" alt="" /></a>
+          <a href="./" target="_blank"><img src="./img/social-media/Telegram.svg" alt="" /></a>
+        </div>
+        <div class="footer__developer">
+          Design & development by
+          <a href="https://miks-soft.com/" target="_blank" class="is-underline-out">MIKS SOFT</a>
+        </div>
+      </div>
+      <div class="footer__copy netbook-visible">© Betatransfer 2023. All right reserved.</div>
+    </div>
+  </div>
+</footer>
+
+    </main>
+    <div class="popup callback_popup">
+  <div class="popup__wrapper">
+    <div class="popup__inner">
+      <div class="popup__close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18.4609" width="2.17571" height="26.1086" transform="rotate(45 18.4609 0)" fill="white" />
+          <rect
+            width="2.17571"
+            height="26.1086"
+            transform="matrix(-0.707107 0.707107 0.707107 0.707107 1.53906 0)"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="popup__header">
+        <div class="popup__title h3">Форма обратной связи</div>
+        <div class="popup__header-text">Укажите Ваше имя</div>
+      </div>
+      <div class="popup__content">
+        <form action="#" class="callback-form__form">
+          <div class="callback-form__form-box">
+            <button type="submit" class="button is-blue">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- <div class="cookie-check">
+  <div class="cookie-check__text">
+    Наш сайт использует файлы cookie для сбора статистики. Нажав «Принять», вы даете согласие на обработку файлов cookie
+    в соответствии с Политикой обработки файлов cookie.
+  </div>
+  <div class="cookie-check__buttons">
+    <div class="button is-confirm">Принять</div>
+    <div class="button is-ghost is-decline">Отклонить</div>
+  </div>
+</div> -->
+
+<script type="text/javascript" src="./js/lenis.min.js"></script>
+<script type="text/javascript" src="./js/gsap.min.js"></script>
+<script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
+<!-- <script type="text/javascript" src="./js/TweenMax.min.js"></script> -->
+<!-- <script type="text/javascript" src="./js/swiper.min.js"></script> -->
+<!-- <script type="text/javascript" src="./js/imask.min.js"></script> -->
+<!-- <script type="text/javascript" src="./js/hammer.min.js"></script> -->
+<script src="./js/swiper.min.js"></script>
+<script src="./js/vendor.js"></script>
+<script src="./js/scripts.js"></script>
+
+  </body>
+</html>
